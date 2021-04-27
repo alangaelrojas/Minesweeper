@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Buscaminas</string>
+    <string name="reiniciar">Reiniciar</string>
+    <string name="bombas_en_juego">Bombas en ronda</string>
+    <string name="informacion">Información</string>
+    <string name="haz_ganado">¡Felicidades, haz ganado!</string>
+    <string name="you_lose">¡Booooooommmm! Haz perdido</string>
+</resources>

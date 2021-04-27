@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alangaelrojas.buscaminas.MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/lyTablero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnReiniciar"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnReiniciar"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/reiniciar"
+            android:onClick="reiniciar"
+            android:src="@drawable/replay"
+            app:layout_constraintBottom_toTopOf="@+id/lblReiniciar"
+            app:layout_constraintEnd_toEndOf="@+id/lblReiniciar"
+            app:layout_constraintStart_toStartOf="@+id/lblReiniciar" />
+
+        <ImageView
+            android:id="@+id/btnInformation"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/reiniciar"
+            android:onClick="info"
+            android:src="@drawable/information"
+            app:layout_constraintBottom_toTopOf="@+id/lblInfo"
+            app:layout_constraintEnd_toEndOf="@+id/lblInfo"
+            app:layout_constraintStart_toStartOf="@+id/lblInfo" />
+
+        <ImageView
+            android:id="@+id/imgNoBombs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/reiniciar"
+            android:src="@drawable/mine"
+            app:layout_constraintBottom_toTopOf="@+id/btnInformation"
+            app:layout_constraintStart_toStartOf="@+id/lblNoBombs" />
+
+        <TextView
+            android:id="@+id/tvNoBombs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="8"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/autour_one"
+            app:layout_constraintBottom_toBottomOf="@+id/imgNoBombs"
+            app:layout_constraintStart_toEndOf="@+id/imgNoBombs"
+            app:layout_constraintTop_toTopOf="@+id/imgNoBombs"
+            />
+        <TextView
+            android:id="@+id/lblNoBombs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/bombas_en_juego"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/autour_one"
+            app:layout_constraintBottom_toTopOf="@+id/imgNoBombs"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/lblReiniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/reiniciar"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/autour_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/informacion"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/autour_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
