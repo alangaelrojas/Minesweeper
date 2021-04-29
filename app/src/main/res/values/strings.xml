@@ -5,4 +5,14 @@
     <string name="informacion">Información</string>
     <string name="haz_ganado">¡Felicidades, haz ganado!</string>
     <string name="you_lose">¡Booooooommmm! Haz perdido</string>
+    <string name="como_jugar">¿Como jugar?</string>
+    <string name="instrucciones_juego_1">El juego consiste en un tablero, en el cual podemos ir presionando cada una de las casillas en azul evitando encontrarnos con una mina, además, te puede salir un número para seguir avanzando… </string>
+    <string name="instrucciones_juego_bomba_1">Si te sale un 1, quiere decir que en cualquiera de sus lados puede haber una bomba, ¡Tenlo en mente!</string>
+    <string name="instrucciones_juego_bomba_2">Un 2 quiere decir que el cualquiera de sus lados puede haber solo dos bombas.</string>
+    <string name="imgBomb1">Ejemplo bomba 1</string>
+    <string name="imgBomb2">Ejemplo bomba 2</string>
+    <string name="imgBomb3">Ejemplo bomba 3</string>
+    <string name="instrucciones_juego_bomba_3">Por ultimo, el 3 quiere decir que hay solo tres bombas en cualquiera de sus lados. El truco esta en contar correctamente las posibles bombas que pudieran haber, tomando en cuenta los demás números</string>
+    <string name="close_dialog">Cerrar dialogo</string>
+    <string name="instrucciones_juego_ganaste">"Ganas si descubres todas las casillas sin encontrar ninguna bomba. "</string>
 </resources>

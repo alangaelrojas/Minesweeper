@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Buscaminas</string>
+    <string name="reiniciar">Restart</string>
+    <string name="bombas_en_juego">Mines in round</string>
+    <string name="informacion">Information</string>
+    <string name="haz_ganado">¡Awesome, you are win!</string>
+    <string name="you_lose">¡Booooooommmm! You lose</string>
+    <string name="como_jugar">¿How to play?</string>
+    <string name="instrucciones_juego_1">The game consists of a board, in which we can press each of the boxes in blue avoiding finding a mine, in addition, you can get a number to continue advancing… </string>
+    <string name="instrucciones_juego_bomba_1">If 1, it means that on either side there may be a mine, keep that in mind!</string>
+    <string name="instrucciones_juego_bomba_2">If 2, it means that on either side there can be only two mines.</string>
+    <string name="imgBomb1">Example mine 1</string>
+    <string name="imgBomb2">Example mine 2</string>
+    <string name="imgBomb3">Example mine 3</string>
+    <string name="instrucciones_juego_bomba_3">Finally, the 3 means that there are only three mines on either side. The trick is to correctly count the possible mines that there may be, taking into account the other numbers</string>
+    <string name="close_dialog">Close dialog</string>
+    <string name="instrucciones_juego_ganaste">"You win if you discover all the squares without finding any mine."</string>
+</resources>

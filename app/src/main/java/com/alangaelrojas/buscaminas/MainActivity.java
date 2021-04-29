@@ -1,5 +1,6 @@
 package com.alangaelrojas.buscaminas;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -12,14 +13,18 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+@SuppressLint("ClickableViewAccessibility")
 public class MainActivity extends AppCompatActivity  implements View.OnTouchListener {
+    private static final int bombs = 8;
 
     private Tablero fondo;
     private Casilla[][] casillas;
+    private TextView noOfBombs;
     private boolean activo = true;
 
     @Override
@@ -31,19 +36,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
         setContentView(R.layout.activity_main);
 
         LinearLayout layout = findViewById(R.id.lyTablero);
+        noOfBombs = findViewById(R.id.tvNoBombs);
 
         fondo = new Tablero(this);
         fondo.setOnTouchListener(this);
         layout.addView(fondo);
 
-        casillas = new Casilla[8][8];
-        for (int f = 0; f < 8; f++) {
-            for (int c = 0; c < 8; c++) {
-                casillas[f][c] = new Casilla();
-            }
-        }
-        this.disponerBombas();
-        this.contarBombasPerimetro();
+        reiniciar(null);
         getSupportActionBar().hide();
     }
 
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
         protected void onDraw(Canvas canvas) {
             canvas.drawRGB(0, 0, 0);
             int ancho = 0;
-            if (canvas.getWidth() < canvas.getHeight())
+            if (getWidth() < getHeight())
                 ancho = fondo.getWidth();
             else
                 ancho = fondo.getHeight();
@@ -147,8 +146,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
         for (int f = 0; f < 8; f++) {
             for (int c = 0; c < 8; c++) {
                 if (casillas[f][c].contenido == 0) {
-                    int cant = contarCoordenada(f, c);
-                    casillas[f][c].contenido = cant;
+                    casillas[f][c].contenido = contarCoordenada(f, c);
                 }
             }
         }
@@ -221,6 +219,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
     }
 
     public void reiniciar(View v) {
+
+        noOfBombs.setText(String.valueOf(bombs));
+
         casillas = new Casilla[8][8];
         for (int f = 0; f < 8; f++) {
             for (int c = 0; c < 8; c++) {
@@ -235,6 +236,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
         playEffect(R.raw.game_start);
     }
     public void info(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_info, null);
+        ImageView cerrar = view.findViewById(R.id.img_closeDialog);
+        AlertDialog dialog = builder.create();
+        cerrar.setOnClickListener(_v -> { dialog.dismiss(); });
+        dialog.setView(view);
+        dialog.show();
     }
 
     private void perdiste() {
@@ -277,8 +285,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnTouchList
         });
     }
 
-    private void playEffect(int resid){
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, resid);
+    private void playEffect(int resId){
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, resId);
         mediaPlayer.start();
     }
 }
