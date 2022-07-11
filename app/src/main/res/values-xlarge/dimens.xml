@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="boardWidth">550dp</dimen>
+    <dimen name="boardHeight">550dp</dimen>
+</resources>

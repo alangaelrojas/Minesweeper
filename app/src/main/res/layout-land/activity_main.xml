@@ -7,8 +7,8 @@
         android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
 
         <LinearLayout
             android:id="@+id/lyTablero"
@@ -31,6 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:contentDescription="@string/reiniciar"
+                android:onClick="reiniciar"
                 android:src="@drawable/replay"
                 app:layout_constraintBottom_toTopOf="@+id/lblReiniciar"
                 app:layout_constraintEnd_toEndOf="@+id/lblReiniciar"
@@ -44,6 +45,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:contentDescription="@string/reiniciar"
+                android:onClick="info"
                 android:src="@drawable/information"
                 app:layout_constraintBottom_toTopOf="@+id/lblInfo"
                 app:layout_constraintEnd_toEndOf="@+id/lblInfo"
@@ -55,57 +57,61 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:layout_marginBottom="24dp"
                 android:contentDescription="@string/reiniciar"
                 android:src="@drawable/mine"
                 app:layout_constraintBottom_toTopOf="@+id/btnInformation"
-                app:layout_constraintStart_toStartOf="@+id/lblNoBombs" />
+                app:layout_constraintEnd_toStartOf="@+id/tvNoBombs" />
 
             <TextView
                 android:id="@+id/tvNoBombs"
-                style="@style/TextDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                app:fontFamily="@font/autour_one"
                 app:layout_constraintBottom_toBottomOf="@+id/imgNoBombs"
-                app:layout_constraintStart_toEndOf="@+id/imgNoBombs"
+                app:layout_constraintEnd_toEndOf="@+id/lblNoBombs"
                 app:layout_constraintTop_toTopOf="@+id/imgNoBombs"
                 tools:text="8" />
 
             <TextView
                 android:id="@+id/lblNoBombs"
-                style="@style/TextDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/bombas_en_juego"
+                android:textColor="@android:color/white"
+                app:fontFamily="@font/autour_one"
                 app:layout_constraintBottom_toTopOf="@+id/imgNoBombs"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/lblReiniciar"
-                style="@style/TextDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/reiniciar"
+                android:textColor="@android:color/white"
+                app:fontFamily="@font/autour_one"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/lblInfo"
-                style="@style/TextDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/informacion"
+                android:textColor="@android:color/white"
+                app:fontFamily="@font/autour_one"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
